@@ -18,26 +18,8 @@
 	<meta name="author" content="">
 	<title>{{ site.title }} - {{ page.title }}</title>
 
-	<!-- Custom modernizr build: http://modernizr.com — load other JavaScript at the end of document -->
-	<script src="js/modernizr.custom.js"></script>
-
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/screen.css">
-	<link rel="stylesheet" href="http://i.icomoon.io/public/temp/ebbcf1f4a3/UntitledProject1/style.css">
-
-	<script type="text/javascript">
-		WebFontConfig = { fontdeck: { id: '44001' } };
-
-		(function() {
-			var wf = document.createElement('script');
-			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-			'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-			wf.type = 'text/javascript';
-			wf.async = 'true';
-			var s = document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(wf, s);
-		})();
-	</script>
 
 	<!-- Typekit -->
 	<script type="text/javascript" src="//use.typekit.net/iac8gyg.js"></script>
@@ -50,7 +32,7 @@
 
 </head>
 
-<body{% if page.section %} class="v-{{ page.section }}"{% endif%} >
+<body{% if page.section %} class="{{ page.section }}"{% endif%} >
 	<!--[if lt IE 7]>
 	<div class="alert-box">
 		<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -60,14 +42,6 @@
 	{% include header.html %}
 
 	{{ content }}
-
-	<!-- Always Load jQuery First
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="bower_components/jquery/jquery.min.js"><\/script>')</script>
-	-->
-
-	<!-- Make responsive website responsive in IE7 & 8 -->
-	<!--[if IE 8 | IE 7]><script src="bower_components/respond/dest/respond.min.js"></script><![endif]-->
 
 </body>
 </html>
