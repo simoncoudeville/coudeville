@@ -11,43 +11,28 @@ h4,
 h5,
 h6 {
 	margin: 0;
-	// font-family: $beta-font-family;
-	// font-weight: $alpha-font-weight;
 	color: $alpha-text-color;
 	text-rendering: optimizelegibility;
-	// text-transform: capitalize;
 }
 
 h1 {
-	// font-family: $beta-font-family;
-	// font-weight: $alpha-font-weight;
 	font-weight: 700;
-	font-style: italic;
 	@include text-dimensions(6,1.5,1);
 }
 
 h2 {
-	// font-weight: $alpha-font-weight;
-	// font-style: italic;
-	// text-transform: uppercase;
-	// letter-spacing: .1em;
-	// font-family: $beta-font-family;
 	@include text-dimensions(1,1,1,1);
 }
 
 h3 {
-	// font-weight: $alpha-font-weight;
 	text-transform: uppercase;
 	letter-spacing: .1em;
-	// font-family: $beta-font-family;
 	@include text-dimensions(-2,1,1);
-	// @include text-dimensions(0,1,.75);
 }
 
 h4,
 h5,
 h6 {
-	// font-weight: $beta-font-weight;
 	@include text-dimensions(0,1,1);
 }
 
@@ -114,14 +99,12 @@ img {
 a {
 	text-decoration: none;
 	color: $alpha-link-color;
-	// transition: all .22s ease-in-out;
 
 	&:visited {
 		color: $alpha-link-colorvisited;
 	}
 
 	&:hover {
-		// text-decoration: underline;
 		color: $alpha-link-colorhover;
 	}
 
@@ -139,12 +122,8 @@ a {
 .content {
 
 	a {
-		// text-decoration: underline;
-		// border-bottom: 1px solid $alpha-link-color;
 		background-image: linear-gradient(#fff 50%, $alpha-link-color 50%);
 		background-repeat: repeat-x;
-		// background-position: 0 1.05rem;
-		// background-size: 2px 2px;
 
 		&:visited {
 			border-color: $alpha-link-colorvisited;

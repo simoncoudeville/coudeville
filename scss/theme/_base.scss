@@ -9,7 +9,6 @@
 }
 
 html {
-	// background-color: $beta-text-color;
 	-webkit-overflow-scrolling: touch;
 	-webkit-text-size-adjust: 100%;
 	    -ms-text-size-adjust: 100%;
@@ -48,20 +47,13 @@ body {
 	-webkit-font-smoothing: antialiased;
 	        font-smoothing: antialiased;
 	text-rendering : optimizelegibility;
-
-	// padding-bottom: 3em;
-	background-color: rgba(hsl(hue($alpha-text-color),25,20),.9);
-
-
-
-
-	// background-attachment: fixed;
 	// -moz-font-feature-settings:"liga=1, dlig=1, smcp=1";
- //    -moz-font-feature-settings:"liga", "dlig", "smcp"; /* EDIT: new syntax for FF 15+ */
- //    -ms-font-feature-settings:"liga", "dlig", "smcp";
- //    -o-font-feature-settings:"liga", "dlig", "smcp";
- //    -webkit-font-feature-settings:"liga", "dlig", "smcp";
- //    font-feature-settings:"liga", "dlig", "smcp";
+	// -moz-font-feature-settings:"liga", "dlig", "smcp"; /* EDIT: new syntax for FF 15+ */
+	// -ms-font-feature-settings:"liga", "dlig", "smcp";
+	// -o-font-feature-settings:"liga", "dlig", "smcp";
+	// -webkit-font-feature-settings:"liga", "dlig", "smcp";
+	// font-feature-settings:"liga", "dlig", "smcp";
+	background-color: rgba(hsl(hue($alpha-text-color),25,20),.9);
 	color: $beta-text-color;
 }
 
@@ -82,8 +74,6 @@ hr {
 	border-width: 1px 0 0;
 	clear: both;
 	max-width: 6em;
-	// margin: 0 0 $alpha-line-height * 1em;
-	// margin-top: 0;
 	@include margin-tb(2,1);
 }
 

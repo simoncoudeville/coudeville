@@ -4,11 +4,5 @@
 
 .main-holder {
 	z-index: 30;
-
-	@include mq($bp4) {
-		@include padding-tb(3,2);
-	}
-
-	// box-shadow: 0 75px 50px -100px rgba($alpha-text-color,.5);
-
+	background-color: #fff;
 }

@@ -3,62 +3,26 @@
 //
 
 .intro-holder {
-	// background-color: $alpha-text-color;
-	// background-color: hsl(hue($alpha-text-color),25,20);
-	// background-color: $gamma-ui-color;
-	// @include margin-bottom(.3);
-	// box-shadow: 0 0 100px 20px rgba(darken($alpha-text-color,20),.25) inset;
-	// background-color: rgba(hsl(hue($alpha-text-color),25,20),.9);
 	background-color: transparent;
 	@include padding-tb(2,1);
 
 	@include mq($bp3) {
-		// @include padding-tb(6,6);
 		@include padding-tb(4,2);
 	}
 
 	@include mq($bp4) {
-		// @include rem-margin-lr
-		// max-width: 50em;
-		// margin: 0 auto;
-		// border-radius: $radius;
 		@include padding-tb(6,3);
-		// @include padding-tb(8,9);
 	}
-
-	// &:before {
-	// 	content: " ";
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	right: 0;
-	// 	bottom: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	opacity: .1;
-	// 	box-shadow: 0 0 100px 20px rgba(black,1) inset;
-	// 	// background: transparent url(../img/wallpaper-516.gif) 50% -600px repeat;
-	// 	// -webkit-background-size: 1200px 1214px;
-	// 	// background-size: 1200px 1214px;
-	// 	// background-attachment: fixed;
-	// }
 
 }
 
 .intro {
-	// text-align: center;
 	color: $gamma-ui-color;
 }
 
 .intro-title {
 	margin-bottom: 0;
-	font-style: normal;
 	color: $mu-text-color;
-
-	// @include mq($bp3) {
-	// 	@include text-dimensions(8,2,0);
-	// }
-
 	@include mq($bp3) {
 		@include text-dimensions(10,2.25,0);
 	}
@@ -66,20 +30,7 @@
 }
 
 .intro-meta {
-	// margin-bottom: 0;
-	// color: lighten($delta-text-color,0);
-
 	color: lighten($jota-text-color,0);
 	opacity: .75;
-	// font-style: italic;
-	// font-variant: small-caps;
-	@include text-dimensions(-1,1,0,.5);
-}
-
-.intro-love {
-	color: lighten($delta-text-color,0);
-	// opacity: .65;
-	// font-style: italic;
-	margin-bottom: 0;
-	@include text-dimensions(0,1,0,1);
+	@include text-dimensions(0,1,0,.5);
 }
