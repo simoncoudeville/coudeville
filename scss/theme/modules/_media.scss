@@ -1,0 +1,62 @@
+//
+// module: home
+//
+
+.media {
+	@extend %clearfix;
+}
+
+.media-header {
+	// border-bottom: 1px solid $gamma-ui-color;
+	// @include margin-bottom(1);
+	// @include padding-bottom(1);
+
+	.media:last-of-type & {
+		// padding-bottom: 0;
+		// border: none;
+		@include margin-bottom(1);
+	}
+
+}
+
+.media-title {
+	// font-style: italic;
+	font-family: $alpha-font-family;
+	font-weight: normal;
+	text-transform: none;
+	letter-spacing: 0;
+	@include text-dimensions(0,1,0);
+
+	a {
+		background-position: 0 1.2rem;
+		background-size: 2px 2px;
+	}
+
+}
+
+.media-meta {
+	// font-style: italic;
+	// margin-bottom: 0;
+	float: right;
+	color: lighten($delta-text-color,0);
+
+}
+
+.list-media {
+
+	.media-title {
+		@include text-dimensions(0,1,0);
+
+		a {
+			background-position: 0 1.2rem;
+			background-size: 2px 2px;
+		}
+
+	}
+
+	.media-meta {
+		float: right;
+		@include text-dimensions(-2,1,0);
+	}
+
+}

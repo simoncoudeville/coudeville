@@ -1,0 +1,144 @@
+// Grid
+
+/*
+ | 	<div class="holder">
+ |		<div class="row">
+ |			<div class="col small-6 medium-4 xlarge-3">
+ |				THIS DIV WILL DISPLAY:
+ |				- 100% 		on mobile
+ |				- 50% 		from $bp2
+ |				- 33.3333% 	from $bp3
+ |				- 25% 		from $bp5
+ |			</div>
+ |		</div>
+ |	</div>
+*/
+
+// Calculate grid classes
+@function grid-calc($colNumber){
+	@return percentage(($colNumber / $grid-columns));
+}
+
+.row {
+	@extend %clearfix;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	max-width: 34em;
+
+	.row{
+		padding: 0;
+		max-width: none;
+		@include rem-margin-lr(-1, -1);
+	}
+
+}
+
+.col {
+	float: left;
+	position: relative;
+	width: 100%;
+	@include rem-padding-lr(1, 1);
+}
+
+//
+// Media Queries
+//
+
+@media (min-width: $bp4) {
+
+	.row {
+		// max-width: #{$grid-width}px;
+		// max-width: $bp5;
+		// max-width: 63.25em;
+
+		.row {
+			max-width: none;
+		}
+
+	}
+
+}
+
+// Generate medium classes if $generate-xsmall variable is set to true in _settings
+@if $generate-xsmall == true {
+	@media (min-width: $bp1) {
+
+		// Generate widths for this breakpoint
+		@for $i from 1 through $grid-columns {
+			.xsmall-#{$i} {
+				width: grid-calc($i);
+			}
+		}
+	}
+}
+
+// Generate small classes if $generate-small variable is set to true in _settings
+@if $generate-small == true {
+	@media (min-width: $bp2) {
+
+		// Generate widths for this breakpoint
+		@for $i from 1 through $grid-columns {
+			.small-#{$i} {
+				width: grid-calc($i);
+			}
+		}
+	}
+}
+
+// Generate medium classes if $generate-medium variable is set to true in _settings
+@if $generate-medium == true {
+	@media (min-width: $bp3) {
+
+		// Generate widths for this breakpoint
+		@for $i from 1 through $grid-columns {
+			.medium-#{$i} {
+				width: grid-calc($i);
+			}
+		}
+
+		.last-col {@include last-col;}
+	}
+}
+
+// Generate large classes if $generate-large variable is set to true in _settings
+@if $generate-large == true {
+	@media (min-width: $bp4) {
+
+		// Generate widths for this breakpoint
+		@for $i from 1 through $grid-columns {
+			.large-#{$i} {
+				width: grid-calc($i);
+			}
+		}
+
+		// Generate pushes from this breakpoint
+		@for $i from 1 through $grid-columns {
+			.push-#{$i} {
+				@include push-left($i);
+			}
+		}
+
+		// Generate pulls from this breakpoint
+		@for $i from 1 through $grid-columns {
+			.pull-#{$i} {
+				@include pull-left($i);
+			}
+		}
+
+	}
+}
+
+// Generate xlarge classes if $generate-xlarge variable is set to true in _settings
+@if $generate-xlarge == true {
+	@media (min-width: $bp5) {
+
+		// Generate widths for this breakpoint
+		@for $i from 1 through $grid-columns {
+			.xlarge-#{$i} {
+				width: grid-calc($i);
+			}
+		}
+
+	}
+}

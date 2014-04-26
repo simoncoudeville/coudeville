@@ -1,0 +1,173 @@
+//
+// Typography
+// ---
+// Default markup for typographic elements, based on the settings file.
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	// font-family: $beta-font-family;
+	// font-weight: $alpha-font-weight;
+	color: $alpha-text-color;
+	text-rendering: optimizelegibility;
+	// text-transform: capitalize;
+}
+
+h1 {
+	// font-family: $beta-font-family;
+	// font-weight: $alpha-font-weight;
+	font-weight: 700;
+	font-style: italic;
+	@include text-dimensions(6,1.5,1);
+}
+
+h2 {
+	// font-weight: $alpha-font-weight;
+	// font-style: italic;
+	// text-transform: uppercase;
+	// letter-spacing: .1em;
+	// font-family: $beta-font-family;
+	@include text-dimensions(1,1,1,1);
+}
+
+h3 {
+	// font-weight: $alpha-font-weight;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	// font-family: $beta-font-family;
+	@include text-dimensions(-2,1,1);
+	// @include text-dimensions(0,1,.75);
+}
+
+h4,
+h5,
+h6 {
+	// font-weight: $beta-font-weight;
+	@include text-dimensions(0,1,1);
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+pre {
+	@include text-dimensions(0,1,1);
+}
+
+ul,
+ol {
+	padding-left: 1em;
+}
+
+blockquote {
+	font-style: italic;
+	color: $delta-text-color;
+	text-align: center;
+	@include padding-tb(1,1);
+
+	p {
+		@include text-dimensions(3,1.25,1);
+	}
+
+}
+
+table {
+	text-align: left;
+	width: 100%;
+	font-family: $alpha-font-family;
+	border-spacing: 0;
+	border-collapse: collapse;
+	@include text-dimensions(14,1,2);
+}
+
+caption {
+	font-family: $alpha-font-family;
+	text-align: left;
+	border-bottom: 1px solid lighten($alpha-text-color,50);
+	font-weight: $beta-font-weight;
+	text-align: center;
+	@include padding-bottom(.5);
+	@include margin-bottom(.5);
+}
+
+td,
+th {
+	padding: .25em 1em .25em 0;
+	border-bottom: 1px solid lighten($gamma-ui-color, 10);
+}
+
+img {
+	max-width: 100%;
+}
+
+//
+// Links
+//
+
+a {
+	text-decoration: none;
+	color: $alpha-link-color;
+	// transition: all .22s ease-in-out;
+
+	&:visited {
+		color: $alpha-link-colorvisited;
+	}
+
+	&:hover {
+		// text-decoration: underline;
+		color: $alpha-link-colorhover;
+	}
+
+	&:focus {
+		outline: thin dotted;
+		color: $alpha-link-colorfocus;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+.content {
+
+	a {
+		// text-decoration: underline;
+		// border-bottom: 1px solid $alpha-link-color;
+		background-image: linear-gradient(#fff 50%, $alpha-link-color 50%);
+		background-repeat: repeat-x;
+		// background-position: 0 1.05rem;
+		// background-size: 2px 2px;
+
+		&:visited {
+			border-color: $alpha-link-colorvisited;
+			background-image: linear-gradient(#fff 50%, $alpha-link-colorvisited 50%);
+		}
+
+		&:hover {
+			background-image: linear-gradient(#fff 50%, $alpha-link-colorhover 50%);
+		}
+
+		&:focus {
+			background-image: linear-gradient(#fff 50%, $alpha-link-colorfocus 50%);
+		}
+
+	}
+
+	p {
+
+		a {
+			background-position: 0 1.2rem;
+			background-size: 2px 2px;
+		}
+
+	}
+
+}

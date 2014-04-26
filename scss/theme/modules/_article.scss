@@ -1,0 +1,12 @@
+//
+// module: article
+//
+
+.article-header {
+	@include margin-bottom(.75);
+}
+
+.article-title {
+	margin-bottom: 0;
+	color: $delta-text-color;
+}
