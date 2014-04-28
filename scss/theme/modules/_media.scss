@@ -7,6 +7,7 @@
 }
 
 .media-title {
+	font-family: $alpha-font-family;
 	font-weight: normal;
 	text-transform: none;
 	letter-spacing: 0;
@@ -40,6 +41,26 @@
 	.media-meta {
 		float: right;
 		@include text-dimensions(-2,1,0);
+	}
+
+}
+
+.project {
+
+	h3 {
+		margin-bottom: 0;
+
+		a {
+			background: none;
+			background-position: 0 1.2rem;
+			background-size: 2px 2px;
+
+			&:hover {
+				background: none;
+			}
+
+		}
+
 	}
 
 }

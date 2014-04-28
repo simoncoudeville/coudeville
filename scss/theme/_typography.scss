@@ -10,29 +10,40 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: $beta-font-family;
 	margin: 0;
 	color: $alpha-text-color;
 	text-rendering: optimizelegibility;
 }
 
 h1 {
-	font-weight: 700;
+	// font-weight: 700;
+	// font-weight: 300;
+	font-weight: 600;
 	@include text-dimensions(6,1.5,1);
 }
 
 h2 {
+	font-weight: 600;
 	@include text-dimensions(1,1,1,1);
 }
 
-h3 {
+h3,
+.h3 {
+	font-weight: 600;
 	text-transform: uppercase;
-	letter-spacing: .1em;
-	@include text-dimensions(-2,1,1);
+	letter-spacing: 2px;
+	// @include text-dimensions(-2,1,1,.15);
+	@include text-dimensions(-1,1,1);
+	// @include text-dimensions(-2,1,0);
+	// @include text-dimensions(-2,1,.75);
+	// @include text-dimensions(0,1,1);
 }
 
 h4,
 h5,
 h6 {
+	font-weight: 600;
 	@include text-dimensions(0,1,1);
 }
 
@@ -52,6 +63,8 @@ ol {
 }
 
 blockquote {
+	// font-family: $beta-font-family;
+	// font-weight: 300;
 	font-style: italic;
 	color: $delta-text-color;
 	text-align: center;
@@ -120,6 +133,12 @@ a {
 }
 
 .content {
+	// text-align: justify;
+	// -webkit-hyphens: auto;
+	// -moz-hyphens: auto;
+	// -ms-hyphens: auto;
+	// hyphens: auto;
+	// hyphenate-limit-lines: 2;
 
 	a {
 		background-image: linear-gradient(#fff 50%, $alpha-link-color 50%);
@@ -148,5 +167,20 @@ a {
 		}
 
 	}
+
+	// h3 {
+
+	// 	a {
+	// 		background: none;
+	// 		background-position: 0 1.2rem;
+	// 		background-size: 2px 2px;
+
+	// 		&:hover {
+	// 			background: none;
+	// 		}
+
+	// 	}
+
+	// }
 
 }

@@ -4,13 +4,18 @@
 
 .intro-holder {
 	background-color: transparent;
-	@include padding-tb(2,1);
+	@include padding-tb(0,1);
 
 	@include mq($bp3) {
-		@include padding-tb(4,2);
+		@include padding-tb(2,2);
+		// @include padding-tb(4,2);
 	}
 
 	@include mq($bp4) {
+		@include padding-tb(3,3);
+	}
+
+	@include mq($bp5) {
 		@include padding-tb(6,3);
 	}
 
@@ -21,6 +26,8 @@
 }
 
 .intro-title {
+	font-family: $alpha-font-family;
+	// font-weight: 300;
 	margin-bottom: 0;
 	color: $mu-text-color;
 	@include mq($bp3) {
@@ -30,7 +37,16 @@
 }
 
 .intro-meta {
+	font-family: $beta-font-family;
+	// font-style: italic;
 	color: lighten($jota-text-color,0);
 	opacity: .75;
-	@include text-dimensions(0,1,0,.5);
+	@include text-dimensions(-1,1,0,.5);
+}
+
+.intro-text {
+	font-family: $beta-font-family;
+	color: lighten($jota-text-color,0);
+	// opacity: .75;
+	@include text-dimensions(0,1,0,1);
 }

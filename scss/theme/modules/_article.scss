@@ -2,11 +2,23 @@
 // module: article
 //
 
-.article-header {
-	@include margin-bottom(.75);
-}
+// .article-header {
+// 	@include margin-bottom(.75);
+// }
 
-.article-title {
-	margin-bottom: 0;
-	color: $delta-text-color;
+// .article-title {
+// 	margin-bottom: 0;
+// 	color: $delta-text-color;
+// }
+
+.article-intro {
+	@extend %clearfix;
+	@include margin-bottom(1);
+
+	p {
+		// font-family: $beta-font-family;
+		color: $alpha-text-color;
+		@include text-dimensions(1,1.1,1);
+	}
+
 }
